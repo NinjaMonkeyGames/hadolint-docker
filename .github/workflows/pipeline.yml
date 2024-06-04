@@ -1,0 +1,25 @@
+name: Hadolint Lint                                                       # Define the name of the workflow
+
+on: [push, pull_request]                                                  # Trigger the workflow on push and pull request events
+
+jobs:                                                                     # Initialise jobs
+  lint:                                                                   # Define a job named 'lint'
+    runs-on: ubuntu-latest                                                # Specify the type of virtual machine to use (Ubuntu latest version)
+
+    container:                                                            # Initialise container
+      image: monkeyknuckles/test                                          # Use a Docker container with the hadonlint image
+
+    steps:                                                                # List of steps to execute in the job
+      - name: Checkout code                                               # Step name: Checkout code from the repository
+        uses: actions/checkout@v3                                         # Use the checkout action to clone the repository
+
+      - name: Copy Hadolint config                                        # Step name: Copy markdownlint configuration file
+        run: cp /app/.hadolint.yaml $GITHUB_WORKSPACE                     # Copy the .hadolint file from the container to the workspace
+
+      - name: Run Hadolint                                                # Step name: Run Hadolint
+        run: >                                                            # Execute the hado command on all docker files in the repository
+             find . \( -iname "dockerfile" 
+             -or -name "*.dockerfile" \)
+             -exec hadolint {} +  
+  
+      

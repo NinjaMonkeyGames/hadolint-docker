@@ -1,0 +1,2 @@
+FROM busybox
+LABEL superfluous="this should not be here"

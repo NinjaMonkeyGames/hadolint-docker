@@ -1,0 +1,1 @@
+RUN zypper install httpd=2.4.46 && zypper clean

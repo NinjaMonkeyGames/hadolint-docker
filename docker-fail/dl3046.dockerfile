@@ -1,0 +1,1 @@
+RUN useradd -u 123456 foobar

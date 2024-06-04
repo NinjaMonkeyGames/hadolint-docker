@@ -1,0 +1,1 @@
+RUN dnf install -y httpd-2.24.2

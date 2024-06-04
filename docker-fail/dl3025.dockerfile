@@ -1,0 +1,2 @@
+FROM busybox
+ENTRYPOINT s3cmd

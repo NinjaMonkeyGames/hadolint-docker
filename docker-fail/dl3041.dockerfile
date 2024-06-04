@@ -1,0 +1,1 @@
+RUN dnf install -y httpd && dnf clean all

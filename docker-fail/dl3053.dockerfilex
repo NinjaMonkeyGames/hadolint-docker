@@ -1,0 +1,1 @@
+$ hadolint --require-label created:rfc3339 Dockerfile

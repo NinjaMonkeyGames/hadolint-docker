@@ -1,0 +1,4 @@
+label-schema:
+    license: spdx
+
+LABEL license="Thou shall not copyright infringe"
