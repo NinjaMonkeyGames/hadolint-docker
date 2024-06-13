@@ -2,15 +2,15 @@
 
 ## What is this repository for? ##
 
-The purpose of this repository is to maintain control over versions of hadolint. This maintains uniformity-
-when enforcing coding standards and formatting rules. This allows for easier upgrades and prevents newer versions from
+The purpose of this repository is to maintain control over versions of Hadolint. This maintains uniformity when
+enforcing coding standards and formatting rules. This allows for easier upgrades and prevents newer versions from
 breaking the pipeline.
 
 ---
 
 ## Configuration information ##
 
-There is a '.hadolint.yaml' file containing the haolint configuration in the root of the project directory. You can
+There is a '.hadolint.yaml' file containing the Haolint configuration in the root of the project directory. You can
 use the following YAML line to copy this into your project directory.
 
 ```shell
@@ -42,8 +42,7 @@ See links below for more information about Hadolint and Alpine Linux.
 
   * **Alpine source pull address:**   docker pull alpine:3.20.0
 
-  * **Alpine source landing page:**   <https://hub.docker.com/_/alpine>
-  * **Hadolint:**                     <https://github.com/hadolint/hadolint>
+  * **GitHub Hadolint:**              <https://github.com/hadolint/hadolint>
   * **VSC Plugin:**                   <https://marketplace.visualstudio.com/items?itemName=exiasr.hadolint>
 
 ---
@@ -51,7 +50,7 @@ See links below for more information about Hadolint and Alpine Linux.
 ## Includes ##
 
 * Alpine Linux        v3.20.0
-* CURL                v8.7.0-r0
+* CURL                v8.7.1-r0
 * Hadolint            v2.12.0
 
 ---
@@ -62,6 +61,7 @@ See links below for more information about Hadolint and Alpine Linux.
 |---------------------------------------|-------|----------------------------------------------------------------------|
 | > docker-fail                         |   49  | Contains examples of every possible docker error.                    |
 | .hadolint.yaml                        |   1   | Contains dockerfile rule configuration.                              |
+| > .git                                |   46  | Contains git configuration files.                                    |
 | > .github > workflows > pipeline.yml  |   1   | Lints all docker files in docker.                                    |
 | dockerfile                            |   1   | Information on how to build docker.                                  |
 | README.md                             |   1   | Contains information about the project.                              |
@@ -78,6 +78,7 @@ This project uses a sequential versioning system.
 | 0.0.0.0        | Base files included.                                                                                |
 | 0.0.0.1        | Updated license.                                                                                    |
 | 0.0.0.2        | Updated 'READEME.md' to align with the layout of the other linter projects.                         |
+| 0.0.0.3        | Internal adjustment to make the project structure consistent across all repositories in the project.|
 
 ---
 
