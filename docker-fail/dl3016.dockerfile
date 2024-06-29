@@ -1,4 +1,4 @@
-FROM node:8.9.1
+FROM node:22.2
 
 RUN npm install express
 RUN npm install @myorg/privatepackage
